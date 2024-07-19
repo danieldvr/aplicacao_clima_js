@@ -7,10 +7,10 @@
     <title>Clima</title>
 
     <!-- Importação CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Importação JavaScript -->
-    <script src="/js/scripts.js" defer></script>
+    <script src="js/scripts.js" defer></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,36 +25,48 @@
 <body>
     <div class="container">
         <div class="form">
-            <h3>Confira o Clima de uma Cidade:</h3>
-            <div class="form-input-container">
-                <input type="text" placeholder="Digite o Nome da Cidade" id="city-input">
-                <button id="search">
-                    <i class="fa-solid fa-magnifying-glass"></i> 
-                </button>
-            </div>
+          <h3>Confira o Clima de uma Cidade:</h3>
+          <div class="form-input-container">
+            <input
+            type="text"
+            placeholder="Digite o nome da cidade"
+            id="city-input"
+          />
+          <button id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          </div>
         </div>
-        <div id="weather-data">
-            <h2>
-                <i class="fa-solid fa-location-dot"></i>
-                <span id="city">Vitória</span>
-                <img src="https://flagsapi.com/BR/shiny/64.png" alt="Bandeira do País" id="country" >
-            </h2>
-            <p id="temperature"><span>25</span>&deg;C</p>
-            <div id="description-container">
-                <p id="description">Nublado</p>
-                <img src="http://openweathermap.org/img/wn/02d.png" alt="Condições do Tempo" id="weather-icon">
-            </div>
-            <div id="details-container">
-                <p id="umidity">
-                    <i class="fa-solid fa-droplet"></i>
-                    <span>48%</span>
-                </p>
-                <p id="wind">
-                    <i class="fa-solid fa-wind"></i>
-                    <span>2km/h</span>
-                </p>
-            </div>
+        <div id="weather-data" class="hide">
+          <h2><i class="fa-solid fa-location-dot"></i> <span id="city"></span>  <img src="" alt="Bandeira do país" crossorigin="anonymous" id="country"></h2>
+          <p id="temperature"><span></span>&deg;C</p>
+          <div id="description-container">
+            <p id="description"></p>
+            <img id="weather-icon" src="" alt="Condições atuais">
+          </div>
+          <div id="details-container">
+            <p id="umidity">
+              <i class="fa-solid fa-droplet"></i> 
+              <span></span>
+            </p>
+            <p id="wind">
+              <i class="fa-solid fa-wind"></i>
+              <span></span>
+            </p>
+          </div>
         </div>
-    </div>
+        <div id="error-message" class="hide">
+          <p>Não foi Possível Encontrar o Clima de uma Cidade com este Nome.</p>
+        </div>
+        <div id="loader" class="hide">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div id="suggestions">
+          <button id="brasilia">Brasília </button>
+          <button id="orlando">Orlando</button>
+          <button id="lisboa">Lisboa</button>
+          <button id="roma">Roma</button>
+        </div>
+      </div>
 </body>
 </html>
